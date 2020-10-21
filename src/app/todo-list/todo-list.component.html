@@ -1,0 +1,12 @@
+<div>
+    <h2>ITEMS</h2>
+    <ul>
+        <li *ngFor="let todo of todo_list; let i = index;">
+            <mat-card>
+                <mat-card-title>{{todo.title}}</mat-card-title>
+                <button mat-mini-fab color="warn" aria-label="delete icon" (click)="deleteItem(i)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </mat-card>
+    </ul>
+</div>

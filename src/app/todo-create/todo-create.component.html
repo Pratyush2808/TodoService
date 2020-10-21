@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <span>Todo Site</span>
+</mat-toolbar>
+<div>
+    <form>
+        <div class="todo_input">
+            <div class="todo_title">
+                <p>Enter Title:</p>
+                <input [(ngModel)]="title"  placeholder="Add Title" name="title">
+            </div>
+            <div class="todo_description">
+                <p>Enter Description:</p>
+                <input [(ngModel)]="description" placeholder="Add Description" name="description">
+            </div>
+            <div class="todo_date">
+                <p>Enter Date:</p>
+                <input type="date" [(ngModel)]="item_date" name="item_date">
+            </div>
+            <button type="submit" *ngIf="title!=='' && description!==''" (click)="addItem($event)">Add Todo</button>
+        </div>
+    </form>
+</div>
